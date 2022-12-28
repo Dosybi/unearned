@@ -4,7 +4,7 @@ const SalaryInput = ({ salary, handleSalaryChange }) => {
       <label className="block text-sm font-medium text-gray-900">
         Зарплата
       </label>
-      <div className="relative mb-2 flex w-2/4">
+      <div className="relative mb-2 flex">
         <input
           type="number"
           inputMode="numeric"
