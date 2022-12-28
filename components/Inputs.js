@@ -18,6 +18,10 @@ const series = [
     length: 96,
   },
   {
+    title: 'Доктор Хаус',
+    length: 176,
+  },
+  {
     title: 'Друзья',
     length: 121,
   },
@@ -46,12 +50,24 @@ const series = [
     length: 99,
   },
   {
+    title: 'Прослушка',
+    length: 60,
+  },
+  {
+    title: 'Рик и Морти',
+    length: 15,
+  },
+  {
     title: 'Симпсоны',
     length: 334,
   },
   {
     title: 'Теория большого взрыва',
     length: 139,
+  },
+  {
+    title: 'Футурама',
+    length: 62,
   },
   {
     title: 'Ходячие мертвецы',
