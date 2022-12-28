@@ -8,7 +8,7 @@ const Series = ({ series, handleSeriesSelect, select, handleDeleteSelect }) => {
     <div className="mb-4 flex items-center">
       <select
         id="series"
-        className="block w-full rounded-lg border border-gray-300 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+        className="block h-10 w-full rounded-lg border border-gray-300 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
         onChange={(e) => {
           handleSeriesSelect(e.target.value)
           setCurrentTitle(e.target.value)

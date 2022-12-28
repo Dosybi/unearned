@@ -22,7 +22,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="mx-auto max-w-2xl bg-white px-4 pt-4">
+      <main className="relative mx-auto h-screen max-w-2xl bg-white px-4 pt-4">
         <Description />
         <Inputs handleResult={handleResult} />
         <Result {...result} />

@@ -7,7 +7,7 @@ const Result = ({ hours, money }) => {
 
   return (
     hours != 0 && (
-      <div>
+      <div className="sticky bottom-0 rounded-xl bg-slate-800 p-4 text-white">
         <div>На просмотр сериалов вы потратили</div>
         <div className="mb-2 text-2xl font-bold">{hours} часов.</div>
         <div>За это время вы могли бы заработать</div>
