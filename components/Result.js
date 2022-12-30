@@ -16,14 +16,12 @@ const Result = ({ hours, money }) => {
       : 'часов'
 
   return (
-    hours != 0 && (
-      <div className="sticky bottom-0 rounded-xl bg-slate-800 p-4 text-white">
-        <div>На просмотр сериалов вы потратили</div>
-        <div className="mb-2 text-2xl font-bold">
-          {hours} {readableHours}.
+    hours > 0 && (
+      <div className="mb-8">
+        <div>
+          За {hours} {readableHours} вы могли бы заработать
         </div>
-        <div>За это время вы могли бы заработать</div>
-        <div className="text-2xl font-bold">{readableAmount} ₸.</div>
+        <div className="text-xl font-bold">{readableAmount} ₸.</div>
       </div>
     )
   )
