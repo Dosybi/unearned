@@ -15,7 +15,7 @@ const ImageCard = ({ title, image, isChecked, handleButtonClick }) => {
         priority
       />
       <button
-        className={`absolute bottom-6 left-4 rounded-2xl border border-white px-1.5 py-1 text-lg transition-colors hover:bg-white hover:text-black ${
+        className={`absolute bottom-6 left-4 rounded-2xl border border-white px-1.5 py-1 text-lg transition-colors md:hover:bg-white md:hover:text-black ${
           isChecked ? 'bg-white text-black' : 'bg-transparent text-white'
         }`}
         onClick={() => handleButtonClick(title)}

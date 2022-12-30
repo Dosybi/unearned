@@ -2,8 +2,9 @@ import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
 import Description from '../components/Description'
-// import Inputs from '../components/Inputs'
 import Result from '../components/Result'
+import ImageCardsWrapper from '../components/ImageCardsWrapper'
+import Inputs from '../components/Inputs'
 
 import madMen from '../assets/mad-men.png'
 import breakingBad from '../assets/breaking-bad.png'
@@ -24,9 +25,6 @@ import futurama from '../assets/futurama.png'
 import walkingDead from '../assets/walking-dead.png'
 import blackMirror from '../assets/black-mirror.png'
 import southPark from '../assets/south-park.png'
-
-import ImageCardsWrapper from '../components/ImageCardsWrapper'
-import Inputs from '../components/Inputs'
 
 const data = [
   {
