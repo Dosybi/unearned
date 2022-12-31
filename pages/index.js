@@ -195,6 +195,7 @@ export default function Home() {
         <Inputs salary={salary} handleSalaryChange={handleSalaryChange} />
         <ImageCardsWrapper
           cards={series}
+          salary={salary}
           handleButtonClick={getSeries}
           key={series.title}
         />

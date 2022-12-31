@@ -17,7 +17,7 @@ const Result = ({ hours, money }) => {
 
   return (
     hours > 0 && (
-      <div className="mb-8">
+      <div className="sticky bottom-0 -mx-4 mb-8 bg-slate-800 p-6 text-white">
         <div>
           За {hours} {readableHours} вы могли бы заработать
         </div>

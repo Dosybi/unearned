@@ -1,6 +1,6 @@
 const SalaryInput = ({ salary, handleSalaryChange }) => {
   return (
-    <div className="mb-6">
+    <>
       <label className="block text-sm font-medium text-gray-900">
         Зарплата
       </label>
@@ -14,7 +14,7 @@ const SalaryInput = ({ salary, handleSalaryChange }) => {
         />
         <div className="absolute right-6 py-3">₸/мес</div>
       </div>
-    </div>
+    </>
   )
 }
 

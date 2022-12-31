@@ -1,27 +1,60 @@
 import Image from 'next/image'
 
-const ImageCard = ({ title, image, isChecked, handleButtonClick }) => {
+const ImageCard = ({
+  title,
+  image,
+  length,
+  salary,
+  isChecked,
+  handleButtonClick,
+}) => {
+  const hoursLastDigit =
+    String(length).split('')[String(length).split('').length - 1]
+  const readableHours =
+    hoursLastDigit === '1' && length > 20
+      ? 'час'
+      : hoursLastDigit === '2' ||
+        hoursLastDigit === '3' ||
+        hoursLastDigit === '4'
+      ? 'часа'
+      : 'часов'
+  const seriesCost = Math.round((salary / 22 / 8) * length)
+  const readableAmount = String(seriesCost)
+    .split('')
+    .map((letter, i, arr) => (i === arr.length - 4 ? letter + ' ' : letter))
+    .map((letter, i, arr) => (i === arr.length - 7 ? letter + ' ' : letter))
+    .join('')
   return (
-    <div className="relative shrink-0">
-      <div className="absolute top-5 left-3 p-1 text-lg font-bold leading-5 text-white">
-        {title}
+    <div className="w-[48%]">
+      <div className="relative">
+        <div
+          className={`${
+            isChecked ? 'bg-slate-50 bg-opacity-80' : ''
+          } absolute top-0 h-full w-full cursor-pointer transition-colors duration-700`}
+          onClick={() => handleButtonClick(title)}
+        ></div>
+        <Image
+          className="rounded-xl"
+          src={image}
+          alt={title}
+          priority
+          responsive
+        />
+        <div
+          className={`absolute bottom-4 left-3 h-6 w-6 cursor-pointer rounded-full border border-white ${
+            isChecked ? 'bg-green-700 bg-opacity-80' : ''
+          }`}
+          onClick={() => handleButtonClick(title)}
+        ></div>
+        <div
+          className={`${isChecked ? 'absolute bottom-4 left-11' : 'hidden'}`}
+        >
+          Смотрел
+        </div>
       </div>
-      <Image
-        className="w-auto rounded-xl"
-        src={image}
-        width={400}
-        height={500}
-        alt={title}
-        priority
-      />
-      <button
-        className={`absolute bottom-6 left-4 rounded-2xl border border-white px-1.5 py-1 text-lg transition-colors md:hover:bg-white md:hover:text-black ${
-          isChecked ? 'bg-white text-black' : 'bg-transparent text-white'
-        }`}
-        onClick={() => handleButtonClick(title)}
-      >
-        Смотрел
-      </button>
+      <div className="mt-1 pl-1 text-sm">
+        {length} {readableHours}, {readableAmount} ₸
+      </div>
     </div>
   )
 }
