@@ -25,7 +25,7 @@ const ImageCard = ({
     .map((letter, i, arr) => (i === arr.length - 7 ? letter + ' ' : letter))
     .join('')
   return (
-    <div className="w-[48%]">
+    <div className="w-[48%] md:w-[32%]">
       <div className="relative">
         <div
           className={`${
